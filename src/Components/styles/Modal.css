@@ -1,0 +1,33 @@
+/* Overlay del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Contenedor del modal */
+.modal {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  z-index: 1001;
+  animation: modalFadeIn 0.3s ease;
+}
+
+/* Título del modal */
+.modal h2 {
+  color: #1a237e;
+  font-size: 24px;
+} 

@@ -1,0 +1,43 @@
+.daily-total-container {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .ventas-summary {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .total-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .total-amount {
+    font-size: 2em;
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .ventas-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .ventas-list th,
+  .ventas-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .ventas-list th {
+    background: #f8f9fa;
+    font-weight: 600;
+  }

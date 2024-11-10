@@ -1,0 +1,387 @@
+/* src/Components/Navbar/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: var(--bg-secondary);
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.brand-icon {
+  color: #6366f1;
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.brand-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-section {
+  position: relative;
+}
+
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.profile-trigger:hover {
+  background-color: var(--bg-secondary);
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-secondary);
+}
+
+.profile-info {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.profile-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.profile-email {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.dropdown-icon {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.5rem;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+
+.dropdown-profile-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-secondary);
+}
+
+.dropdown-profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dropdown-email {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0.5rem 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item .dropdown-icon {
+  font-size: 1.25rem;
+}
+
+.sidebar.closed ~ .main-content .navbar {
+  inset: 0 0 auto 70px;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  padding-top: 90px;
+  transition: margin-left 0.3s ease;
+  overflow-x: hidden;
+  padding-left: 260px;
+  transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-content, 
+.products-container {
+  padding: 2rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  background: white;
+  transition: width 0.3s ease;
+  z-index: 200;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar.closed {
+  width: 70px;
+}
+
+.sidebar.closed ~ .main-content {
+  padding-left: 70px;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.theme-selector {
+  position: relative;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-secondary);
+}
+
+.theme-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.theme-option:hover {
+  background-color: var(--bg-secondary);
+}
+
+.color-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.blue {
+  background: #3b82f6;
+}
+
+.color-option.purple {
+  background: #8b5cf6;
+}
+
+.logo-wrapper:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .brand-subtitle {
+    display: none;
+  }
+  
+  .brand-title {
+    font-size: 1.1rem;
+  }
+  
+  .logo-wrapper {
+    padding: 6px;
+  }
+  
+  .brand-icon {
+    font-size: 20px;
+  }
+}
+
+.brand-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-wrapper::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+  z-index: 2;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  20%, 100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* Estilos para el contenedor de la imagen */
+.profile-image-container {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
